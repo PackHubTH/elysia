@@ -1462,7 +1462,8 @@ export default class Elysia<
 				Singleton & {
 					derive: Ephemeral['derive'] & Volatile['derive']
 					resolve: Ephemeral['resolve'] & Volatile['resolve']
-				}
+				},
+				BasePath
 			>
 		>
 	): this
@@ -1628,7 +1629,8 @@ export default class Elysia<
 										Volatile['derive']
 									resolve: Ephemeral['resolve'] &
 										Volatile['resolve']
-								})
+								}),
+				BasePath
 			>
 		>
 	): this
